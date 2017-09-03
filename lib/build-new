@@ -1,0 +1,359 @@
+#!/bin/bash
+
+# Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
+# Last update 2016/06/30
+# Copyright 2014,2015,2016 Under the GNU GPL2 License
+
+# get default's locale file
+DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
+if [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+. $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+. $DEFLOCDIR/ja
+elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+. $DEFLOCDIR/pl
+elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+. $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+. $DEFLOCDIR/pt_PT
+elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+. $DEFLOCDIR/ru
+else
+. $DEFLOCDIR/en
+fi
+
+testroot="`whoami`"
+
+if [ "$testroot" != "root" ]; then
+    /usr/bin/remsu $0 &
+fi
+
+DIALOG400="yad --window-icon=drive-cdrom --width=400 --height=200 --center"
+DIALOG500="yad --window-icon=drive-cdrom --width=500 --height=300 --center"
+DIALOG700="yad --window-icon=drive-cdrom --width=700 --height=500 --center"
+DIALOG="yad --window-icon=drive-cdrom --width=600 --height=350 --center"
+TITLE="--always-print-result --dialog-sep --image=drive-cdrom --title="
+TEXT="--text="
+ENTRY="--entry "
+ENTRYTEXT="--entry-text "
+MENU="--list --column=$LOCAL1 --column=$LOCAL2"
+OKEXIT=" --button=Ok:0 --button=$LOCAL3:1 "
+MSGBOX=" --button=Ok:0 "
+FILESELECT="--file-selection"
+TITLETEXT="Custom ISO Builder"
+DIRSELECT="--file-selection --directory"
+FILTER="--file-filter"
+FIELD="--field"
+if [ -f /opt/sparky/sparky-xterm ]; then
+. /opt/sparky/sparky-xterm
+else
+SPARKYXTERM="x-terminal-emulator"
+fi
+
+mainmenu () {
+
+CHOICES=`$DIALOG $TITLE"$TITLETEXT" $OKEXIT $MENU $TEXT"$LOCAL13" \
+Unpack_ISO_Full "$LOCAL14" \
+Chroot "$LOCAL15" \
+Files "$LOCAL16" \
+Edit "$LOCAL17" \
+Clean_Cache "$LOCAL18" \
+Build_New "$LOCAL19" \
+Back "$LOCAL47"`
+
+if [ "$?" = "0" ]; then
+	CHOICE=`echo $CHOICES | cut -d "|" -f 1`
+else
+	exit 0
+fi
+
+if [ "$CHOICE" = "Unpack_ISO_Full" ]; then
+	unpackisofullmenu
+elif [ "$CHOICE" = "Chroot" ]; then
+	chrootmenu
+elif [ "$CHOICE" = "Files" ]; then
+	filesmenu
+elif [ "$CHOICE" = "Edit" ]; then
+	editmenu
+elif [ "$CHOICE" = "Clean_Cache" ]; then
+	cleandebmenu
+elif [ "$CHOICE" = "Build_New" ]; then
+	buildnewmenu
+elif [ "$CHOICE" = "Back" ]; then
+	/usr/bin/custom-iso-builder
+else
+	exit 0
+fi
+}
+
+unpackisofullmenu () {
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL20 \n\n$LOCAL33" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+	
+DIRTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL22" $DIRSELECT`
+
+OLDISO=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL23" $FILESELECT $FILTER="ISO image |*.iso"`
+
+rm -rf $DIRTEMP/ISOTEMP
+rm -rf $DIRTEMP/ISOMOUNT
+mkdir -p $DIRTEMP/ISOTEMP
+mkdir -p $DIRTEMP/ISOMOUNT
+
+# mount iso image
+modprobe -r loop
+modprobe loop
+mount -o ro -o loop $OLDISO $DIRTEMP/ISOMOUNT
+
+# copy all iso files
+if [ -f $DIRTEMP/ISOMOUNT/live/*.squashfs ]; then
+
+	rsync -a $DIRTEMP/ISOMOUNT $DIRTEMP/ISOTEMP/ | zenity --progress --pulsate --width=450 --height=100 --auto-close --window-icon=/usr/share/icons/sparky/iso-builder/iso-builder.png --text="$LOCAL24" --title="Custom ISO Builder" --no-cancel
+
+	rm -rf $DIRTEMP/CONF
+	mkdir -p $DIRTEMP/CONF
+	cp -a /etc/custom-iso-builder.conf $DIRTEMP/CONF
+
+	if [ -f $DIRTEMP/ISOTEMP/ISOMOUNT/live/*.squashfs ]; then
+		cd $DIRTEMP
+		unsquashfs -f $DIRTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs | zenity --progress --pulsate --width=450 --height=100 --auto-close --window-icon=/usr/share/icons/sparky/iso-builder/iso-builder.png --text="$LOCAL25" --title="Custom ISO Builder" --no-cancel
+
+		rm -rf $DIRTEMP/ISOTEMP/ISOMOUNT/live
+
+	fi
+
+	# umount the iso image
+	umount $DIRTEMP/ISOMOUNT
+	rm -rf $DIRTEMP/ISOMOUNT
+
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL26 \n$DIRTEMP \n\n$LOCAL27"
+
+	mainmenu
+
+else
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL28"
+
+	# umount iso image
+	umount $DIRTEMP/ISOMOUNT
+	rm -rf $DIRTEMP/ISOMOUNT
+fi
+
+mainmenu
+
+}
+
+chrootmenu () {
+
+$DIALOG500 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n$LOCAL30 \n\n$LOCAL33" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+
+CHROOTTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $DIRSELECT`
+
+# Preparing Filesystem
+mount -o bind /dev $CHROOTTEMP/squashfs-root/dev
+mount -o bind /proc $CHROOTTEMP/squashfs-root/proc
+mount -o bind /sys $CHROOTTEMP/squashfs-root/sys
+
+# Preparing Network Connections
+cp /etc/hosts $CHROOTTEMP/squashfs-root/etc/hosts
+cp /etc/resolv.conf $CHROOTTEMP/squashfs-root/etc/resolv.conf
+
+# Starting Shell
+$SPARKYXTERM -e "chroot $CHROOTTEMP/squashfs-root /bin/bash"
+
+# Cleaning after chrooting
+umount -f -l $CHROOTTEMP/squashfs-root/dev
+umount -f -l $CHROOTTEMP/squashfs-root/proc
+umount -f -l $CHROOTTEMP/squashfs-root/sys
+rm -f $CHROOTTEMP/squashfs-root/etc/hosts
+rm -f $CHROOTTEMP/squashfs-root/etc/resolv.conf
+
+mainmenu
+}
+
+filesmenu () {
+
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n$LOCAL31 \n\n$LOCAL33" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+
+FILESTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $DIRSELECT`
+$SPARKYXTERM -e "mc $FILESTEMP"
+
+mainmenu
+}
+
+editmenu () {
+
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL32 \n\n$LOCAL29 \n\n$LOCAL33" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+
+EDITTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $FILESELECT`
+$SPARKYXTERM -e "nano $EDITTEMP/CONF/custom-iso-builder.conf"
+
+mainmenu
+}
+
+cleandebmenu () {
+
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n $LOCAL34 \n\n$LOCAL33" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+
+CHROOTTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $DIRSELECT`
+
+# Preparing Filesystem
+mount -o bind /dev $CHROOTTEMP/squashfs-root/dev
+mount -o bind /proc $CHROOTTEMP/squashfs-root/proc
+mount -o bind /sys $CHROOTTEMP/squashfs-root/sys
+
+# Preparing Network Connections
+cp /etc/hosts $CHROOTTEMP/squashfs-root/etc/hosts
+cp /etc/resolv.conf $CHROOTTEMP/squashfs-root/etc/resolv.conf
+
+# removing debs
+chroot $CHROOTTEMP/squashfs-root apt-get clean
+
+# Cleaning after chrooting
+umount -f -l $CHROOTTEMP/squashfs-root/dev
+umount -f -l $CHROOTTEMP/squashfs-root/proc
+umount -f -l $CHROOTTEMP/squashfs-root/sys
+rm -f $CHROOTTEMP/squashfs-root/etc/hosts
+rm -f $CHROOTTEMP/squashfs-root/etc/resolv.conf
+
+$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL35"
+
+mainmenu
+}
+
+buildnewmenu () {
+
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL36" $OKEXIT
+
+if [ "$?" != "0" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL21"
+	mainmenu
+fi
+
+BUILDNEWTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $DIRSELECT`
+
+# load the config file 
+. $BUILDNEWTEMP/CONF/custom-iso-builder.conf
+
+rm -rf $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live
+mkdir -p $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live
+
+# copy your kernel and initrd for the livecd
+if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/vmlinuz ]; then
+	rm -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/vmlinuz
+fi
+
+if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/initrd.img ]; then
+	rm -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/initrd.img
+fi
+
+cp $BUILDNEWTEMP/squashfs-root/boot/vmlinuz-* $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/vmlinuz
+cp $BUILDNEWTEMP/squashfs-root/boot/initrd.img-* $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/initrd.img
+
+#make new squashfs
+if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs ]; then
+	rm -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs
+fi
+
+cd $BUILDNEWTEMP
+$SPARKYXTERM -e "mksquashfs $BUILDNEWTEMP/squashfs-root $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs -no-duplicates $SQUASHFSOPTSFULL"
+
+#checking the size of the compressed filesystem to ensure it meets the iso9660 spec for a single file" 
+SQUASHFSSIZE=`ls -s $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs | awk -F " " '{print $1}'`
+
+if [ "$SQUASHFSSIZE" -gt "3999999" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL37"
+	mainmenu
+fi
+
+# build new iso
+if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs ]; then
+
+	cd $BUILDNEWTEMP/ISOTEMP/ISOMOUNT
+
+	if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/EFI/BOOT/*.efi ]; then
+
+		$SPARKYXTERM -e "xorriso -as mkisofs -rock -omit-version-number -disable-deep-relocation -joliet -allow-leading-dots -volid "$ISOCUSTOMVOLIDFULL" -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot -o "$BUILDNEWTEMP/$CUSTOMISOFULL" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
+
+	else
+
+		$SPARKYXTERM -e "xorriso -as mkisofs -iso-level 3 -volid "$ISOCUSTOMVOLID" -J -joliet-long -eltorito-boot isolinux/isolinux.bin -eltorito-catalog isolinux/boot.cat -iso-level 3 -no-emul-boot -boot-load-size 4 -boot-info-table -partition_offset 16 -o "$BUILDNEWTEMP/$CUSTOMISO" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
+
+	fi
+
+else
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL38"
+	mainmenu
+
+fi
+
+# crate isohybryde
+cd $BUILDNEWTEMP
+
+if [ -f $BUILDNEWTEMP/*.iso ]; then
+
+	if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/EFI/BOOT/*.efi ]; then
+
+		isohybrid -u $BUILDNEWTEMP/$CUSTOMISOFULL
+
+	else
+		isohybrid -u $BUILDNEWTEMP/$CUSTOMISO
+
+	fi
+
+else
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL39"
+	mainmenu
+
+fi
+
+# create md5sum
+if [ -f $BUILDNEWTEMP/*.iso ]; then
+
+	if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/EFI/BOOT/*.efi ]; then
+
+		md5sum $CUSTOMISOFULL > $CUSTOMISOFULL.md5
+
+	else
+		md5sum $CUSTOMISO > $CUSTOMISO.md5
+
+	fi
+
+else
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL40"
+	mainmenu
+
+fi
+
+$DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL41" $MSGBOX
+
+mainmenu
+}
+
+mainmenu

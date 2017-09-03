@@ -1,0 +1,57 @@
+# Polish localization file for Custom ISO Builder.
+# Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
+# Under the GNU GPL v2
+# Last update 2015/10/29
+# Translated to Polish by pavroo
+
+LOCAL1="Nazwa"
+LOCAL2="Opis"
+LOCAL3="Zakończ"
+LOCAL4="Musisz być administratorem systemu... Wyjście"
+LOCAL5="Aplikacja umożliwia rozpakowanie obrazu ISO, dokonanie zmian i zbudowanie nowego obrazu ISO.\n\nOperacja ta wymaga około 5-20 GB powierzchni dysku.\n\nProszę wybrać jedną z opcji:"
+LOCAL6="Rozpakuj i przebuduj obraz ISO"
+LOCAL7="Rozpakuj i zbuduj nowy, spersonalizowany obraz ISO"
+LOCAL8="O programie Custom ISO Builder"
+LOCAL9="Custom ISO Builder to narzędzie, które pozwala na przebudowę istniejącego obrazu ISO i zmodyfikowanie go według własnych potrzeb. \nMoże być użyte do modyfikacji SparkyLinux i innych bazujących na Debian dystrybucji live Linux."
+LOCAL10="Bądź ostrożny używając tej aplikacji, robisz to na własne ryzyko."
+LOCAL11="Custom ISO Builder jest udostępniony na licencji GNU GPLv2."
+LOCAL12="Sugestie, błędy i inne sprawy mogą być zgłaszane \nna forum SparkyLinux http://sparkylinux.org/forum/"
+LOCAL13="Rozpakowanie i personalizacja obrazu ISO oraz tworzenie nowego ISO.\n\nProszę wybrać jedną z opcji:"
+LOCAL14="Rozpakuj istniejący obraz ISO, razem z SQUASHFS"
+LOCAL15="Chrootuj do systemu i dokonaj zmian"
+LOCAL16="Uruchom menadżera plików Midnight Commander"
+LOCAL17="Edituj plik konfiguracyjny nowego ISO"
+LOCAL18="Usuń wszyskie pakiety DEB aby zredukować rozmiar ISO"
+LOCAL19="Buduj nowy, zmodyfikowany obraz ISO"
+LOCAL20="Musisz wybrać katalog ROBOCZY oraz obraz ISO do rozpakowania.\n\nUżyj tylko linuksowego systemu plików."
+LOCAL21="Nic nie zostało zrobione! \n\nKliknij OK aby zakończyć."
+LOCAL22="Wybierz katalog ROBOCZY."
+LOCAL23="Wybierz obraz ISO do rozpakowania."
+LOCAL24="Kopiowanie plików z obrazu ISO.\n\Proszę czekać..."
+LOCAL25="Rozpakowywanie pliku SQUASHFS.\n\Proszę czekać..."
+LOCAL26="Obraz ISO został rozpakowany do:"
+LOCAL27="Kliknij OK aby powrócić do głównego menu."
+LOCAL28="Nie znaleziono pliku SQASHFS!\n\nZakończ teraz..."
+LOCAL29="Wybierz swój katalog ROBOCZY."
+LOCAL30="Możesz chrootować się do systemu, zaktualizować pakiety i dodać nowe.\n\nAby chrootować się do systemu 32 bitowego, musisz uruchomić aplikację w systemie gospodarza 32 lub 64 bit.\nAby chrootować się do systemu 64 bitowego, musisz uruchomić aplikację w systemie gospodarza 64 bit.\n\nPo zakończeniu wszystkich działań, pozostaw zainstalowane tylko jedno jądro systemu, które będzie użyte do nowego ISO."
+LOCAL31="Usunięcie wszystkich pobranych wcześniej pakietów DEB."
+LOCAL32="Teraz możesz zmienić nazwę nowego obrazu ISO i dodać dodatkowe opcje budowania ISO."
+LOCAL33="Czy chcesz kontnuować?"
+LOCAL34="Uruchomienie menadżera plików Midnight Commander, dzięki czemu będziesz mógł spersonalizować pliki systemowe.\n\nPozowoli to na dodanie, usunięcie oraz modyfikację plików."
+LOCAL35="Zrobione! \nWszystkie pakiety DEB zostały usunięte.\nKliknij OK aby zakończyć."
+LOCAL36="Jeśli wszysko zostało już przygotowane, możesz zbudować nowy obraz ISO.\nZostaną użyte wszystkie pliki, również te zmienione, w Twoim katalogu ROBOCZYM.\n\nCzy chcesz zbudować nowy obraz ISO teraz?"
+LOCAL37="Skompresowany system jest większy niż pozwala specyfikacja iso9660 dla pojedyńczego pliku. Musisz zmniejszyć ilość danych, które użyłeś do tworzenia obrazu ISO, a następnie spróbuj ponownie."
+LOCAL38="Nie znaleziono pliku SQASHFS!\nNie można utworzyć obrazu ISO.\n\nZakończ..."
+LOCAL39="Nie znaleziono obrazu ISO!\nNie można utworzyć hybrydowego obrazu ISO.\n\nZakończ..."
+LOCAL40="Nie znaleziono hybrydowego obrazu ISO!\nNie można utworzyć sumy kontrolnej md5.\n\nZakończ..."
+LOCAL41="Jeśli wszystko poszło dobrze, nowy obraz ISO jest gotowy w Twoim katalogu ROBOCZYM.\n\nMożesz przetestować go w maszynie wirtualnej, wypalić na czystą płytę CD/DVD lub skopiować na przenośny dysk Flash USB."
+LOCAL42="Rozpakowanie i przebudowa istniejącego obrazu ISO.\n\nProszę wybrać jedną z opcji:"
+LOCAL43="Rozpakuj istniejący obraz ISO"
+LOCAL44="Przebuduj rozpakowany obraz ISO"
+LOCAL45="Musisz wybrać katalog ROBOCZY oraz obraz ISO do rozpakowania."
+LOCAL46="Jeśli wszystko zostało już przygotowane, możesz zbudować nowy obraz ISO.\n\nZostanie użyty istniejący plik SQASHFS oraz pozostałe, zmodyfikowane pliki obrazu ISO.\n\nCzy chcesz zbudować nowy obraz ISO teraz?"
+LOCAL47="Powrót do głównego menu"
+
+### .desktop file, również do przetłumaczenia
+# Name[pl_PL]=
+# Comment[pl_PL]=Personalizacja i Przebudowa Obrazu ISO

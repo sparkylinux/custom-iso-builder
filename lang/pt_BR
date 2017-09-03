@@ -1,0 +1,64 @@
+#Arquivo de localização  para o Português do Brasil do  aplicativo Construtor de  ISO Customizada.
+# Copyright 2015 PaweÅ‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
+# Sob a licença GNU GPL v2
+# Última atualização 2015/10/29
+# Traduzido por Claudio Cesar de Sá "ccs1664" <ccs1664@gmail.com> 2015/11/30
+
+
+LOCAL1="Nome"
+LOCAL2="Infomações"
+LOCAL3="Saída"
+LOCAL4="Voce deve ser root... Saindo"
+LOCAL5="Esta ferramenta permitirá que voce descompacte uma imagem ISO, customize-a e crie uma nova imagem ISO.\n\nA operação necessita em torno de 5-20 GB de espaço em seu drive ou disco rígido.\n\nPor gentileza selecione uma opção:"
+LOCAL6="Descompacte e reconstrua  uma  imagem ISO"
+LOCAL7="Descompacte e construa uma nova imagem ISO, totalmente  customizada"
+LOCAL8="Sobre o Construtor de ISO Customizada"
+LOCAL9="Construtor de ISO Customizada é uma ferramenta a qual pode reconstruir uma imagem ISO de uma existente e customizá-la como
+voce gostaria. \nEla pode ser usada pelo SparkyLinux e por outras
+distribuições live baseadas em  Linux Debian."
+LOCAL10="Atenção, ao estar usando esta aplicação, tudo que voce estiver fazendo é de sua própria responsabilidade."
+LOCAL11="Construtor de ISO Customizada é publicado sob Licença GNU GPLv2."
+LOCAL12="Sugestões, bugs e outras coisas podem ser reportadas no \nForum do SparkyLinux http://sparkylinux.org/forum/"
+LOCAL13="Esta ferramenta deixará que voce descompacte uma  imagem ISO, customize-a e criar uma nova.\n\nPor gentileza  selecione  uma opção:"
+LOCAL14="Descompacte uma imagem ISO existente   incluindo SQUASHFS"
+LOCAL15="Mude o diretório corrente do root (chroot) para o sistema e  customize-o"
+LOCAL16="Execute o gerenciador de arquivo Midnight Commander"
+LOCAL17="Edite o arquivo de configuração da nova imagem ISO"
+LOCAL18="Limpe todos os pacotes DEB para reduzir o tamanho da   imagem ISO"
+LOCAL19="Construa uma nova, uma  imagem ISO totalmente customizada"
+LOCAL20="Voce deve escolher o diretório de TRABALHO e uma  imagem ISO  para ser descompactada.\n\nUse somente um sistema de arquivo tipo Linux."
+LOCAL21="Nada mais para ser feito! \n\nClick OK para sair."
+LOCAL22="Escolha o diretório de TRABALHO."
+LOCAL23="Escolha uma  imagem ISO  para ser descompactada."
+LOCAL24="Copiando os arquivos da  imagem ISO  agora.\n\Por gentileza, aguarde..."
+LOCAL25="Descompactando agora o SQUASHFS.\n\Por gentileza, aguarde..."
+LOCAL26="The  imagem ISO  foi  descompactada em:"
+LOCAL27="Click OK para voltar para o menu principal."
+LOCAL28="Nenhum arquivo SQASHFS foi encontrado!\n\nSaindo agora..."
+LOCAL29="Escolha seu diretório de TRABALHO."
+LOCAL30="Isto permite voce mudar o diretório de root (chroot) de seu sistema, fazer um upgrade dos arquivos e  instalar novos enchimentos e novidades.\n\nPara mudar o diretório de root (chroot) para um ambiente de  32 bits voce necessita de um sistema hospedeiro de 32 ou 64 bits.\nPara mudar o sistema de root (chroot) para um ambiente de 64 bits voce  necessita de um sistema hospedeiro de  64 bits.\n\nDepois de voce terminar, mantenha somente um  kernel pré-instalado para ser usado pela  nova ISO."
+LOCAL31="Aqui voce removerá todos arquivos DEB baixados (downloaded)."
+LOCAL32="Agora voce pode mudar o nome da nova imagem ISO  e
+adicionar suas próprias opções na construção desta ISO."
+LOCAL33="Voce deseja continuar?"
+LOCAL34="O gerenciador de arquivo, Midnight Commander (mc) será  customizado no seu sistema de arquivo.\n\nIsto permite que voce adicone, remova ou modifique o sistema de arquivos."
+LOCAL35="Feito! \nTodos os pacotes DEB foram removidos.\nClick OK para sair."
+LOCAL36="Se tudo já tiver sido preparado, voce pode construir a nova  imagem ISO.\nIsto vai usar todos os arquivos que voce criou ou
+mudou em seu  diretório de trabalho.\n\nVoce quer construir a nova  imagem ISO  agora?"
+LOCAL37="O sistema de arquivo compactado é maior do que é permitido pela especificação iso9660 para um simples arquivo.
+Voce deve tentar reduzir a quantidade de dados usados para  construir a  imagem ISO  e tente novamente."
+LOCAL38="O arquivo SQASHFS está faltando!\nNão se consegue  criar uma  nova  imagem ISO.\n\nSaindo agora..."
+LOCAL39="O arquivo da imagem ISO  está faltando!\nNão se pode criar uma imagem ISO híbrida.\n\nSaindo agora..."
+LOCAL40="O arquivo da imagem ISO híbrida está faltando!\nNão se pode criar o arquivo md5sum (testa a corretude da compactação).\n\nSaindo  agora..."
+LOCAL41="Se tudo transcorreu bem até aqui, a sua nova  imagem ISO  está pronta para ir para o seu diretório de TRABALHO.\n\nVoce pode testá-la em uma máquina irtual, gravar em um disco de CD/DVD virgem ou copiá-la para um disco do tipo Flash USB (pendrive)."
+LOCAL42="Aqui,  permitirá a voce descompactar e  reconstruir  uma   imagem ISO existente.\n\nPor gentileza selecione uma opção:"
+LOCAL43="Descompacte uma imagem ISO  existente"
+LOCAL44="Reconstrua uma imagem ISO  descompactada"
+LOCAL45="Voce tem que escolher o diretório de TRABALHO e
+uma  imagem ISO  para ser descompactada."
+LOCAL46="Se tudo  já  foi preparado, voce pode  reconstruir a  imagem ISO.\n\nAqui voce pode construir uma  imagem usando o arquivo SQASHFS existente e customizar os outros arquivos da imagem ISO.\n\nVoce quer construir uma  nova  imagem ISO  agora?"
+LOCAL47="Volte ao menu principal"
+
+### .desktop file to be translated too
+# Name[pt_BR]=
+# Comment[pt_BR]=Customizar e Reconstruir a Imagem ISO

@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Custom ISO Builder script can extract existing ISO image, 
+# customize the file system and build a new ISO image.
+# Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
+# Copyright 2014,2015,2016,2017 under the GNU GPL2 License
+# Last update 2017/05/18
+#
+# The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
+# Copyright 2007-2012 Under the GNU GPL2 License
+#
+# This script requires yad to run
+
+# get default's locale file
+DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
+if [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+. $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+. $DEFLOCDIR/ja
+elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+. $DEFLOCDIR/pl
+elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+. $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+. $DEFLOCDIR/pt_PT
+elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+. $DEFLOCDIR/ru
+else
+. $DEFLOCDIR/en
+fi
+
+DIALOG400="yad --window-icon=drive-cdrom --width=400 --height=200 --center"
+DIALOG500="yad --window-icon=drive-cdrom --width=500 --height=300 --center"
+DIALOG700="yad --window-icon=drive-cdrom --width=700 --height=500 --center"
+DIALOG="yad --window-icon=drive-cdrom --width=600 --height=350 --center"
+TITLE="--always-print-result --dialog-sep --image=drive-cdrom --title="
+TEXT="--text="
+ENTRY="--entry "
+ENTRYTEXT="--entry-text "
+MENU="--list --column=$LOCAL1 --column=$LOCAL2"
+OKEXIT=" --button=Ok:0 --button=$LOCAL3:1 "
+MSGBOX=" --button=Ok:0 "
+FILESELECT="--file-selection"
+TITLETEXT="Custom ISO Builder"
+DIRSELECT="--file-selection --directory"
+FILTER="--file-filter"
+FIELD="--field"
+
+testroot="`whoami`"
+
+if [ "$testroot" != "root" ]; then
+	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL4"
+	exit 1
+fi
+
+rootmenu () {
+
+CHOICES=`$DIALOG $TITLE"$TITLETEXT" $OKEXIT $MENU $TEXT"$LOCAL5" \
+Rebuild "$LOCAL6" \
+Build_New "$LOCAL7" \
+About "$LOCAL8"`
+
+if [ "$?" = "0" ]; then
+	CHOICE=`echo $CHOICES | cut -d "|" -f 1`
+else
+	exit 0
+fi
+
+if [ "$CHOICE" = "Rebuild" ]; then
+	/usr/lib/custom-iso-builder/bin/rebuild
+elif [ "$CHOICE" = "Build_New" ]; then
+	/usr/lib/custom-iso-builder/bin/build-new
+elif [ "$CHOICE" = "About" ]; then
+$DIALOG500 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL9 \n\
+\n\
+$LOCAL10 \n\
+\n\
+$LOCAL11 \n\
+\n\
+$LOCAL12"
+rootmenu
+else
+	exit 0
+fi
+}
+
+rootmenu

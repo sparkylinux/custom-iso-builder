@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Custom ISO Builder
+GenericName=Custom ISO Builder
+Comment=Customize and Rebuild ISO Image
+Comment[es_AR]=Personaliza y reconstruye una imagen ISO
+Comment[fr_FR]=Personnalise et reconstruit une image ISO
+Comment[it_IT]=Modifica e riassembla un'immagine ISO
+Comment[ja_JP]=ISO イメージのカスタマイズ・再構築
+Comment[pl_PL]=Personalizacja i Przebudowa Obrazu ISO
+Comment[pt_BR]=Customizar e Reconstruir a Imagem ISO
+Comment[pt_PT]=Personalize e reconstrua uma Imagem ISO
+Comment[ru_RU]=Настройка и повторная сборка образа ISO
+Exec=remsu /usr/bin/custom-iso-builder
+Icon=drive-cdrom
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;System

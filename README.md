@@ -1,7 +1,7 @@
 Custom ISO Builder
 Custom ISO Builder is a tool which can rebuild an existing ISO image and customize it.
 
-Copyright (C) 2014-2017 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2014-2018 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ mc
 mount
 rsync
 sparky-remsu
-sparky-xterm
+sparky-xterm (>= 0.2.0)
 squashfs-tools
 syslinux
 syslinux-utils

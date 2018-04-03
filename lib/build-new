@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Last update 2016/06/30
-# Copyright 2014,2015,2016 Under the GNU GPL2 License
+# Copyright 2014-2018 Under the GNU GPL2 License
+# Last update 2018/03/29
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
@@ -27,7 +27,6 @@ else
 fi
 
 testroot="`whoami`"
-
 if [ "$testroot" != "root" ]; then
     /usr/bin/remsu $0 &
 fi
@@ -48,14 +47,14 @@ TITLETEXT="Custom ISO Builder"
 DIRSELECT="--file-selection --directory"
 FILTER="--file-filter"
 FIELD="--field"
-if [ -f /opt/sparky/sparky-xterm ]; then
-. /opt/sparky/sparky-xterm
+if [ -f /usr/bin/sparky-xterm ];then
+	SPARKYXTERM="/usr/bin/sparky-xterm"
 else
-SPARKYXTERM="x-terminal-emulator"
+	echo "sparky-xterm is missing... Exiting..."
+	exit 1
 fi
 
 mainmenu () {
-
 CHOICES=`$DIALOG $TITLE"$TITLETEXT" $OKEXIT $MENU $TEXT"$LOCAL13" \
 Unpack_ISO_Full "$LOCAL14" \
 Chroot "$LOCAL15" \
@@ -150,7 +149,6 @@ mainmenu
 }
 
 chrootmenu () {
-
 $DIALOG500 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n$LOCAL30 \n\n$LOCAL33" $OKEXIT
 
 if [ "$?" != "0" ]; then
@@ -170,7 +168,7 @@ cp /etc/hosts $CHROOTTEMP/squashfs-root/etc/hosts
 cp /etc/resolv.conf $CHROOTTEMP/squashfs-root/etc/resolv.conf
 
 # Starting Shell
-$SPARKYXTERM -e "chroot $CHROOTTEMP/squashfs-root /bin/bash"
+$SPARKYXTERM "chroot $CHROOTTEMP/squashfs-root /bin/bash"
 
 # Cleaning after chrooting
 umount -f -l $CHROOTTEMP/squashfs-root/dev
@@ -183,7 +181,6 @@ mainmenu
 }
 
 filesmenu () {
-
 $DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n$LOCAL31 \n\n$LOCAL33" $OKEXIT
 
 if [ "$?" != "0" ]; then
@@ -192,13 +189,12 @@ if [ "$?" != "0" ]; then
 fi
 
 FILESTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $DIRSELECT`
-$SPARKYXTERM -e "mc $FILESTEMP"
+$SPARKYXTERM "mc $FILESTEMP"
 
 mainmenu
 }
 
 editmenu () {
-
 $DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL32 \n\n$LOCAL29 \n\n$LOCAL33" $OKEXIT
 
 if [ "$?" != "0" ]; then
@@ -207,13 +203,12 @@ if [ "$?" != "0" ]; then
 fi
 
 EDITTEMP=`$DIALOG700 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29" $FILESELECT`
-$SPARKYXTERM -e "nano $EDITTEMP/CONF/custom-iso-builder.conf"
+$SPARKYXTERM "nano $EDITTEMP/CONF/custom-iso-builder.conf"
 
 mainmenu
 }
 
 cleandebmenu () {
-
 $DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL29 \n $LOCAL34 \n\n$LOCAL33" $OKEXIT
 
 if [ "$?" != "0" ]; then
@@ -248,7 +243,6 @@ mainmenu
 }
 
 buildnewmenu () {
-
 $DIALOG400 $TITLE"$TITLETEXT" $TEXT"$LOCAL36" $OKEXIT
 
 if [ "$?" != "0" ]; then
@@ -282,7 +276,7 @@ if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs ]; then
 fi
 
 cd $BUILDNEWTEMP
-$SPARKYXTERM -e "mksquashfs $BUILDNEWTEMP/squashfs-root $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs -no-duplicates $SQUASHFSOPTSFULL"
+$SPARKYXTERM "mksquashfs $BUILDNEWTEMP/squashfs-root $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs -no-duplicates $SQUASHFSOPTSFULL"
 
 #checking the size of the compressed filesystem to ensure it meets the iso9660 spec for a single file" 
 SQUASHFSSIZE=`ls -s $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs | awk -F " " '{print $1}'`
@@ -299,11 +293,11 @@ if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/live/filesystem.squashfs ]; then
 
 	if [ -f $BUILDNEWTEMP/ISOTEMP/ISOMOUNT/EFI/BOOT/*.efi ]; then
 
-		$SPARKYXTERM -e "xorriso -as mkisofs -rock -omit-version-number -disable-deep-relocation -joliet -allow-leading-dots -volid "$ISOCUSTOMVOLIDFULL" -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot -o "$BUILDNEWTEMP/$CUSTOMISOFULL" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
+		$SPARKYXTERM "xorriso -as mkisofs -rock -omit-version-number -disable-deep-relocation -joliet -allow-leading-dots -volid "$ISOCUSTOMVOLIDFULL" -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot -o "$BUILDNEWTEMP/$CUSTOMISOFULL" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
 
 	else
 
-		$SPARKYXTERM -e "xorriso -as mkisofs -iso-level 3 -volid "$ISOCUSTOMVOLID" -J -joliet-long -eltorito-boot isolinux/isolinux.bin -eltorito-catalog isolinux/boot.cat -iso-level 3 -no-emul-boot -boot-load-size 4 -boot-info-table -partition_offset 16 -o "$BUILDNEWTEMP/$CUSTOMISO" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
+		$SPARKYXTERM "xorriso -as mkisofs -iso-level 3 -volid "$ISOCUSTOMVOLID" -J -joliet-long -eltorito-boot isolinux/isolinux.bin -eltorito-catalog isolinux/boot.cat -iso-level 3 -no-emul-boot -boot-load-size 4 -boot-info-table -partition_offset 16 -o "$BUILDNEWTEMP/$CUSTOMISO" "$BUILDNEWTEMP/ISOTEMP/ISOMOUNT""
 
 	fi
 

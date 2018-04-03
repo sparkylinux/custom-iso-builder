@@ -3,8 +3,8 @@
 # Custom ISO Builder script can extract existing ISO image, 
 # customize the file system and build a new ISO image.
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Copyright 2014,2015,2016,2017 under the GNU GPL2 License
-# Last update 2017/05/18
+# Copyright 2014-2018 under the GNU GPL2 License
+# Last update 2018/03/29
 #
 # The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
 # Copyright 2007-2012 Under the GNU GPL2 License
@@ -51,14 +51,12 @@ FILTER="--file-filter"
 FIELD="--field"
 
 testroot="`whoami`"
-
 if [ "$testroot" != "root" ]; then
 	$DIALOG400 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL4"
 	exit 1
 fi
 
 rootmenu () {
-
 CHOICES=`$DIALOG $TITLE"$TITLETEXT" $OKEXIT $MENU $TEXT"$LOCAL5" \
 Rebuild "$LOCAL6" \
 Build_New "$LOCAL7" \

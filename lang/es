@@ -1,12 +1,11 @@
 # Archivo de localizaciÛn en espanol para Custom ISO Builder.
 # Copyright 2015 Fernando "seacat" Velo <seacat.linux@gmail.com> 2015/12/22
 # Bajo la licencia GNU GPL v2
-# Ultima actualizaciÛn 2016/01/13
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Nombre"
 LOCAL2="Info"
 LOCAL3="Salir"
-LOCAL4="Se tiene que ejecutar como çrootù... Salir"
+LOCAL4="Se tiene que ejecutar como root... Salir"
 LOCAL5="Esta herramienta le paremitir· desempaquetar una imagen ISO, personalizarla y crear una nueva imagen ISO.\n\nLa operaciÛn necesita alrededor de 5 a 20 GB de espacio en su unidad.\n\nPor favor, elija una opciÛn:"
 LOCAL6="Desempaqueta y reconstruye una imagen ISO"
 LOCAL7="Desempaqueta y construye una imagen ISO nueva completamente personalizada"
@@ -17,7 +16,7 @@ LOCAL11="Custom ISO Builder se publica bajo la licencia GNU GPLv2."
 LOCAL12="Se pueden informar sugerencias, errores y otras cosas en \nel Foro de SparkyLinux http://sparkylinux.org/forum/"
 LOCAL13="Esta herramienta le permitir· desempaquetar una imagen ISO, personalizarla y crear una nueva.\n\nPor favor, elija una opciÛn:"
 LOCAL14="Desempaqueta una imagen ISO existente incluyendo SQUASHFS"
-LOCAL15="Hacer çchrootù al sistema y personalizarlo"
+LOCAL15="Hacer chroot al sistema y personalizarlo"
 LOCAL16="Ejecutar el administrador de archivos Midnight Commander"
 LOCAL17="Editar el archivo de configuraciÛn de la nueva imagen ISO"
 LOCAL18="Eliminar todos los paquetes DEB para reducir el tamano de la imagen ISO"
@@ -32,7 +31,7 @@ LOCAL26="Se desempaquetÛ la imagen ISO en:"
 LOCAL27="Hacer clic en OK para volver al men˙ principal."
 LOCAL28="YNo se encontrÛ ning˙n archivo SQASHFS! \n\nSalir ahora..."
 LOCAL29="Elija su directorio de TRABAJO."
-LOCAL30="Esto le permite hacer çchrootù en el sistema, actualizar archivos e instalar nuevas cosas. \n\nPara hacer çchrootù a un entorno de 32 bits, Ud necesita un sistema host de 32 o 64 bits.\nPara hacer çchrootù a un entorno de 64 bits, Ud necesita un sistema host de 64 bits. \n\nDespuÈs de terminar, mantanga solamente un kernel preinstalado para usarse con la nueva imagen ISO."
+LOCAL30="Esto le permite hacer chroot en el sistema, actualizar archivos e instalar nuevas cosas. \n\nPara hacer chroot a un entorno de 32 bits, Ud necesita un sistema host de 32 o 64 bits.\nPara hacer chroot a un entorno de 64 bits, Ud necesita un sistema host de 64 bits. \n\nDespuÈs de terminar, mantanga solamente un kernel preinstalado para usarse con la nueva imagen ISO."
 LOCAL31="Esto eliminar· todos los archivos DEB descargados."
 LOCAL32="Ahora Ud puede cambiar el nombre de la nueva imagen ISO y agregar sus propias oppciones para construir la imagen ISO."
 LOCAL33="?Quiere continuar?"
@@ -50,7 +49,6 @@ LOCAL44="Reconstruir la imagen ISO desempaquetada"
 LOCAL45="Ud tiene que elegir un directorio de TRABAJO y una imagen ISO para desempaquetarla."
 LOCAL46="Si todo ya se preparÛ, puede reconstruir la imagen ISO.\n\nSe puede construir la imagen usando el SQASHFS existente y otros archivos ISO personalizados.\n\n?Quiere construir la nueva imagen ISO ahora?"
 LOCAL47="Volver al men˙ principal"
-
 ### .desktop file to be translated too
 # Name[es_AR]=
 # Comment[es_AR]=Personaliza y reconstruye una imagen ISO

@@ -1,9 +1,8 @@
 # Polish localization file for Custom ISO Builder.
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Under the GNU GPL v2
-# Last update 2015/10/29
+# Last update 2018/08/05 by pavroo
 # Translated to Polish by pavroo
-
 LOCAL1="Nazwa"
 LOCAL2="Opis"
 LOCAL3="Zakończ"
@@ -51,7 +50,6 @@ LOCAL44="Przebuduj rozpakowany obraz ISO"
 LOCAL45="Musisz wybrać katalog ROBOCZY oraz obraz ISO do rozpakowania."
 LOCAL46="Jeśli wszystko zostało już przygotowane, możesz zbudować nowy obraz ISO.\n\nZostanie użyty istniejący plik SQASHFS oraz pozostałe, zmodyfikowane pliki obrazu ISO.\n\nCzy chcesz zbudować nowy obraz ISO teraz?"
 LOCAL47="Powrót do głównego menu"
-
 ### .desktop file, również do przetłumaczenia
 # Name[pl_PL]=
 # Comment[pl_PL]=Personalizacja i Przebudowa Obrazu ISO

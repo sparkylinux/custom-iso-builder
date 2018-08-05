@@ -1,8 +1,7 @@
 ﻿# Fichier de localisation française du Custom ISO Builder.
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/06/05
 # Sous licence GNU GPL v2
-# Dernière mise à jour 2016/06/05
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Nom"
 LOCAL2="Info"
 LOCAL3="Quitter"
@@ -50,7 +49,6 @@ LOCAL44="Reconstruire une image ISO existante"
 LOCAL45="Vous devez choisir un répertoire de travail et une image ISO à dépaqueter."
 LOCAL46="Si tout est déjà prêt, vous pouvez reconstruire votre image ISO.\n\nOn peut reconstruire l'image avec un SQASHFS existant et d'autres fichiers ISO personnalisés.\n\nVoulez-vous construire votre nouvelle image ISO maintenant?"
 LOCAL47=" Retour au menu principal"
-
 ### .desktop file to be translated too
 # Name[fr_FR]=
 # Comment[fr_FR]=Personnalise et reconstruit une image ISO

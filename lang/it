@@ -1,8 +1,7 @@
 # File di localizzazione in Itailano per Custom ISO Builder
 # copyright 2015, "malato" Carlo <abbassolafrangetta@gmail.com> 2015/10/27
 # Rilasciato sotto licenza GNU GPL v2
-# Ulitmo aggiornamento 28/10/2015
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Nome"
 LOCAL2="Informazioni"
 LOCAL3="Esci"
@@ -50,7 +49,6 @@ LOCAL44="Riassembla un'immagine ISO già scompattata"
 LOCAL45="Devi scegliere una cartella dove operare e l'immagine ISO da scompattare."
 LOCAL46="Se è tutto pronto, puoi riassemblare l'imamgine ISO.\n\nRiassemblerà l'ISO utiilizzando lo stesso SQASHFS and gli altri file che hai modificato.\n\nVuoi assemblare la nuova immagine ISO?"
 LOCAL47="Torna al menù principale"
-
 ### .desktop file to be translated too
 # Name[it_IT]=
 # Comment[it_IT]=Modifica e riassembla un'immagine ISO

@@ -1,9 +1,8 @@
 # Japanese localization file for Custom ISO Builder.
 # Copyright 2015 Paweł‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Under the GNU GPL v2
-# Last update 2015/12/23
+# Last update 2018/08/05 by pavroo
 # Translated to Japanese by BALLOON a.k.a. Fu-sen.
-
 LOCAL1="名前"
 LOCAL2="情報"
 LOCAL3="終了"
@@ -51,7 +50,6 @@ LOCAL44="解凍した ISO イメージの再構築"
 LOCAL45="作業ディレクトリを ISO イメージを解凍するために選択する必要があります。"
 LOCAL46="すでに用意されている場合は、ISOイメージを再構築することができます。\n\n既存の SQASHFS およびその他カスタマイズされた ISO ファイルを使用してイメージを構築することができます。\n\n新しい ISO イメージを構築しますか？"
 LOCAL47="メインメニューへ戻る"
-
 ### .desktop file to be translated too
 # Name[ja_JP]=
 # Comment[ja_JP]=ISO イメージのカスタマイズ・再構築

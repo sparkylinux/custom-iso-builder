@@ -4,7 +4,7 @@
 # customize the file system and build a new ISO image.
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
 # Copyright 2014-2018 under the GNU GPL2 License
-# Last update 2018/03/29
+# Last update 2018/08/05 by pavroo
 #
 # The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
 # Copyright 2007-2012 Under the GNU GPL2 License
@@ -13,27 +13,23 @@
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
-if [ "`cat /etc/default/locale | grep es_ES`" != "" ]; then
-.$DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep es_LA`" != "" ]; then
-. $DEFLOCDIR/es 
-elif [ "`cat /etc/default/locale | grep es_MX`" != "" ]; then
-. $DEFLOCDIR/es 
-elif [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+if [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
 . $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+. $DEFLOCDIR/id_ID
+elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
 . $DEFLOCDIR/it
-elif [ "`cat /etc/default/locale | grep ja_JP`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
 . $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
 elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep ru_RU`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en

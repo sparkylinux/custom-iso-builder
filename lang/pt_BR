@@ -1,10 +1,8 @@
 #Arquivo de localização  para o Português do Brasil do  aplicativo Construtor de  ISO Customizada.
 # Copyright 2015 PaweÅ‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Sob a licença GNU GPL v2
-# Última atualização 2015/10/29
 # Traduzido por Claudio Cesar de Sá "ccs1664" <ccs1664@gmail.com> 2015/11/30
-
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Nome"
 LOCAL2="Infomações"
 LOCAL3="Saída"
@@ -58,7 +56,6 @@ LOCAL45="Voce tem que escolher o diretório de TRABALHO e
 uma  imagem ISO  para ser descompactada."
 LOCAL46="Se tudo  já  foi preparado, voce pode  reconstruir a  imagem ISO.\n\nAqui voce pode construir uma  imagem usando o arquivo SQASHFS existente e customizar os outros arquivos da imagem ISO.\n\nVoce quer construir uma  nova  imagem ISO  agora?"
 LOCAL47="Volte ao menu principal"
-
 ### .desktop file to be translated too
 # Name[pt_BR]=
 # Comment[pt_BR]=Customizar e Reconstruir a Imagem ISO

@@ -1,8 +1,7 @@
 # Arquivo de localização para Portugues de Portugal do Custom ISO Builder.
 # Copyright 2016 Joel Chaves "Flacc" <joel_chaves@icloud.com> Monday 02 February 23:18:20 WET 2016
 # Sob a Licença GNU GPL v2
-# Última atualização Tuesday 02 February 23:18:20 WET 2016
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Nome"
 LOCAL2="Informação"
 LOCAL3="Sair"
@@ -49,7 +48,6 @@ LOCAL43="Reconstruir imagem ISO descompactado"
 LOCAL45="Terá de escolher um diretório de TRABALHO e uma imagem ISO a ser descompactado."
 LOCAL46="Se tudo já foi preparado, pode reconstruir a imagem ISO\n\node construir a imagem usando SQUASHFS existentes e outros arquivos ISO personalizados.\n\nQuer construir a nova imagem ISO agora?"
 LOCAL47="Voltar ao menu principal"
-
 ### Arquivo a ser traduzido também .desktop
 # Name[pt_PT]=
 # Comment[pt_PT]=Personalize e reconstrua uma Imagem ISO

@@ -1,8 +1,7 @@
 # English localization file for Custom ISO Builder.
 # Copyright 2015 Paweł‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Under the GNU GPL v2
-# Last update 2015/12/12
-
+# Last update 2018/08/05 by pavroo
 LOCAL1="Name"
 LOCAL2="Info"
 LOCAL3="Exit"
@@ -50,7 +49,6 @@ LOCAL44="Rebuild unpacked ISO image"
 LOCAL45="You have to choose a WORKING directory and an ISO image to be unpacked."
 LOCAL46="If everything has been prepared already, you can rebuild the ISO image.\n\nIt can build the image using existing SQASHFS and other customized ISO files.\n\nDo you want to build the new ISO image now?"
 LOCAL47="Back to the main menu"
-
 ### .desktop file to be translated too
 # Name[en_US]=
 # Comment[en_US]=Customize and Rebuild ISO Image

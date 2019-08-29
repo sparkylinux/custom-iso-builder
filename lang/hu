@@ -1,0 +1,55 @@
+# English localization file for Custom ISO Builder.
+# Copyright 2015 Paweł‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
+# Under the GNU GPL v2
+# Last update 2018/08/05 by pavroo
+LOCAL1="Név"
+LOCAL2="Információ”
+LOCAL3="Kijárat"
+LOCAL4="Root-ként kell futtatni... Kilépés"
+LOCAL5="Ez az eszköz lehetővé teszi Önnek ISO kép kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nA művelet a meghajtón nagyjából 5-20 GB helyet igényel.\n\nKérjük, válasszon opciót!”
+LOCAL6="Kicsomagolja és újraépíti az ISO képet"
+LOCAL7="Kicsomagol és épít egy új, teljesen személyre szabott ISO képet"
+LOCAL8="A Custom ISO Builder-ről"
+LOCAL9="A Custom ISO Builder egy eszköz, amelyik újraépít és személyre szab egy létező ISO képet, ahogy szeretné.\nHasználható SparkyLinux és egyéb, Debian alapú élő Linux disztribúciókhoz.”
+LOCAL10="Legyen óvatos az alkalmazás használatával, saját kockázatára teszi!”
+LOCAL11="Custom ISO Builder is published under GNU GPLv2 License."
+LOCAL12="Javaslat, hibák és egyéb dolgok jelentendők\nSparkyLinux Forums http://sparkylinux.org/forum/"
+LOCAL13="Ez az eszköz lehetővé teszi Önnek ISO kép kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nKérjük, válasszon opciót!”
+LOCAL14="Kicsomagol egy SQUASHFS-t tartalmazó, létező ISO képet"
+LOCAL15="Chroot-olja a rendszerbe és szabja személyre!"
+LOCAL16="Futtassa a Midnight Commander fájlkezelőt!"
+LOCAL17="Javítsa az új ISO konfigurációs fájlját!"
+LOCAL18="Tisztítsa ki az összes DEB csomagot, hogy csökkentse az ISO kép méretét!”
+LOCAL19="Építsen új, teljesen személyre-szabott ISO képet!"
+LOCAL20="MŰKÖDŐ könyvtárat kell válasszon és kicsomagolnia az ISO képet. Csak Linux fájlrendszert használjon!”
+LOCAL21="Semmi sem változott!!\n\nKattintson OK-t a kilépéshez!"
+LOCAL22="MŰKÖDŐ könyvtárat válasszon!"
+LOCAL23="Válassza ki a kicsomagolandó ISO képet!”
+LOCAL24="Fájlok másolása az ISO képről most!”\n\nKérjük, várjon ...”
+LOCAL25="A SQUASHFS kicsomagolása most.\n\nKérjük, várjon..."
+LOCAL26="Az ISO kép kicsomagolva a ...ba/be.”
+LOCAL27="Kattintson az OK-ra a főmenübe visszatéréshez."
+LOCAL28="NEM található SQASHFS fájl! \n\nKilépés most..."
+LOCAL29="Válassza az Ön MŰKÖDŐ könyvtárat!”
+LOCAL30="Ez lehetővé teszi Önnek, hogy chroot-oljon a rendszerbe, naprakésszé tegye a fájljait és telepítsen új dolgot. \n\n32-bites környezetbe chroot-oláshoz 32 vagy 64 bites host-rendszerre (gazdarendszerre) van szüksége.\n64-bites környezetbe chroot-oláshoz 64 bites host-rendszerre (gazdarendszerre) van szüksége. \n\nMiután befejezte, csak egy kernelt tartson  előtelepítve új ISO kép használatára!”
+LOCAL31="Ez el fogja távolítani az összes letöltött DEB fájlt."
+LOCAL32="Most ki tudja cserélni az új ISO kép nevét és adja meg saját opcióit az ISO felépítéséhez!"
+LOCAL33="Kívánja folytatni?"
+LOCAL34="Ez meg fogja nyitja a Midnight Commander fájlkezelőt a személyre szabott fájlrendszerbe.\n\nEz lehetővé teszi Önnek rendszerfájlok hozzáadását, eltávolítását vagy módosítását."
+LOCAL35="Végrehajtva! \n\nAz összes DEB csomag eltávolításra került.\nKattintson OK-t a kilépéshez."
+LOCAL36="Ha már minden elő van készítve, fel tud építeni új ISO képet. \nEz használni fogja az összes Ön által létrehozott vagy kicserélt fájlt az Ön MŰKÖDŐ könyvtárában. \n\nKíván most új ISO képet építeni?"
+LOCAL37="A tömörített fájlrendszer nagyobb, mint az iso9660 által egyetlen fájlra megengedett. Meg kell próbálnia csökkenteni az ISO kép építéséhez használt adatok mennyiségét és megkísérelni újra!”
+LOCAL38="A SQASHFS fájl hiányzik! \nNem lehetséges/tudja az új ISO képet létrehozni. \n\nKilépés most..."
+LOCAL39="Az ISO képfájl hiányzik! \nNem lehet/tud létrehozni ISO hibridet. \n\nKilépés most..."
+LOCAL40="A hibrid ISO képfájl hiányzik! \nNem lehet/tud létrehozni md5sum fájlt. \n\nKilépés most..."
+LOCAL41="Ha minden rendben ment, az Ön új ISO képe használatra kész az Ön MŰKÖDŐ könyvtárában. \n\nTesztelni tudja virtuális gépen, üres CD/DVD lemezre írni vagy egy Flash USB diszkre másolni."
+LOCAL42="Ez lehetővé teszi Önnek létező ISO kép kicsomagolását és újraépítését.\n\nKérjük, válasszon opciót:"
+LOCAL43="Létező ISO kép kicsomagolása"
+LOCAL44="Ki nem csomagolt ISO kép újraépítése"
+LOCAL45="Választania kell MŰKÖDŐ könyvtárat és kicsomagolni való ISO képet!”
+LOCAL46="Ha már minden elkészült, újra tudja építeni az ISO képet\n\nEz képet tud építeni létező SQASHFS-t és más személyre szabott ISO fájlok használatával.\n\nKíván most új ISO képet építeni?"
+LOCAL47="Visszatérés a főmenübe."
+### .desktop file to be translated too
+# Name[en_US]=
+# Comment[en_US]=Customize and Rebuild ISO Image
+[Translator´s comment: A fordító megjegyzése: a chroot használatával egy program bezárható egy adott könyvtárba. Ha jól állítjuk be, nincs lehetősége, hogy a megadott könyvtáron kívül mást is lásson. Feltételezem, hogy egy Linux használó az egyszerű neve alapján is tudja értelmezni. Nemomen]

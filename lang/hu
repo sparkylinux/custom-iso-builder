@@ -1,4 +1,4 @@
-# English localization file for Custom ISO Builder.
+# Hungarian localization file for Custom ISO Builder. (Translated by Nemomen)
 # Copyright 2015 Paweł‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Under the GNU GPL v2
 # Last update 2018/08/05 by pavroo
@@ -12,7 +12,7 @@ LOCAL7="Kicsomagol és épít egy új, teljesen személyre szabott ISO képet"
 LOCAL8="A Custom ISO Builder-ről"
 LOCAL9="A Custom ISO Builder egy eszköz, amelyik újraépít és személyre szab egy létező ISO képet, ahogy szeretné.\nHasználható SparkyLinux és egyéb, Debian alapú élő Linux disztribúciókhoz.”
 LOCAL10="Legyen óvatos az alkalmazás használatával, saját kockázatára teszi!”
-LOCAL11="Custom ISO Builder is published under GNU GPLv2 License."
+LOCAL11="Custom ISO Builder Under the GNU GPL v2. (A GNU GPL v2 szerint)."
 LOCAL12="Javaslat, hibák és egyéb dolgok jelentendők\nSparkyLinux Forums http://sparkylinux.org/forum/"
 LOCAL13="Ez az eszköz lehetővé teszi Önnek ISO kép kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nKérjük, válasszon opciót!”
 LOCAL14="Kicsomagol egy SQUASHFS-t tartalmazó, létező ISO képet"
@@ -30,7 +30,7 @@ LOCAL25="A SQUASHFS kicsomagolása most.\n\nKérjük, várjon..."
 LOCAL26="Az ISO kép kicsomagolva a ...ba/be.”
 LOCAL27="Kattintson az OK-ra a főmenübe visszatéréshez."
 LOCAL28="NEM található SQASHFS fájl! \n\nKilépés most..."
-LOCAL29="Válassza az Ön MŰKÖDŐ könyvtárat!”
+LOCAL29="Válassza az Ön MŰKÖDŐ könyvtárát!”
 LOCAL30="Ez lehetővé teszi Önnek, hogy chroot-oljon a rendszerbe, naprakésszé tegye a fájljait és telepítsen új dolgot. \n\n32-bites környezetbe chroot-oláshoz 32 vagy 64 bites host-rendszerre (gazdarendszerre) van szüksége.\n64-bites környezetbe chroot-oláshoz 64 bites host-rendszerre (gazdarendszerre) van szüksége. \n\nMiután befejezte, csak egy kernelt tartson  előtelepítve új ISO kép használatára!”
 LOCAL31="Ez el fogja távolítani az összes letöltött DEB fájlt."
 LOCAL32="Most ki tudja cserélni az új ISO kép nevét és adja meg saját opcióit az ISO felépítéséhez!"
@@ -46,10 +46,9 @@ LOCAL41="Ha minden rendben ment, az Ön új ISO képe használatra kész az Ön 
 LOCAL42="Ez lehetővé teszi Önnek létező ISO kép kicsomagolását és újraépítését.\n\nKérjük, válasszon opciót:"
 LOCAL43="Létező ISO kép kicsomagolása"
 LOCAL44="Ki nem csomagolt ISO kép újraépítése"
-LOCAL45="Választania kell MŰKÖDŐ könyvtárat és kicsomagolni való ISO képet!”
+LOCAL45="Választania kell egy MŰKÖDŐ könyvtárat és egy kicsomagolni való ISO képet!”
 LOCAL46="Ha már minden elkészült, újra tudja építeni az ISO képet\n\nEz képet tud építeni létező SQASHFS-t és más személyre szabott ISO fájlok használatával.\n\nKíván most új ISO képet építeni?"
 LOCAL47="Visszatérés a főmenübe."
 ### .desktop file to be translated too
 # Name[en_US]=
 # Comment[en_US]=Customize and Rebuild ISO Image
-[Translator´s comment: A fordító megjegyzése: a chroot használatával egy program bezárható egy adott könyvtárba. Ha jól állítjuk be, nincs lehetősége, hogy a megadott könyvtáron kívül mást is lásson. Feltételezem, hogy egy Linux használó az egyszerű neve alapján is tudja értelmezni. Nemomen]

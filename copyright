@@ -3,12 +3,16 @@ Upstream Author(s):
     Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 
 Files: *
-    Copyright (C) 2014-2018 Paweł Pijanowski
+    Copyright (C) 2014-2019 Paweł Pijanowski
     Under the GNU GPL2 License
 
 File: /usr/bin/custom-iso-builder
     is partly based on the code of Remastersys    
     Copyright (C) 2007,2008,2009 Tony Brijeski under GNU GPLv2
+
+File: el
+    Copyright (C) 2019 jidan
+    License: GPL-2
 
 File: es
     Copyright (C) 2015, 2016 Fernando "seacat" Velo <seacat.linux@gmail.com>

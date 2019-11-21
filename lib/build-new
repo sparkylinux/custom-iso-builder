@@ -2,11 +2,13 @@
 
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
 # Copyright 2014-2019 Under the GNU GPL2 License
-# Last update 2019/08/29 by pavroo
+# Last update 2019/11/21 by pavroo
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
-if [ "`cat /etc/default/locale | grep es`" != "" ]; then
+if [ "`cat /etc/default/locale | grep el`" != "" ]; then
+. $DEFLOCDIR/el
+elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
 elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
 . $DEFLOCDIR/fr

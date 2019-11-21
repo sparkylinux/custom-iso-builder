@@ -2,8 +2,10 @@
 Version=1.0
 Encoding=UTF-8
 Name=Custom ISO Builder
+Name[el]=Προσαρμοσμένη Δημιουργία ISO
 GenericName=Custom ISO Builder
 Comment=Customize and Rebuild ISO Image
+Comment[el]=Προσαρμογή και επαναδημιουργία αρχείου ISO
 Comment[es]=Personaliza y reconstruye una imagen ISO
 Comment[fr]=Personnalise et reconstruit une image ISO
 Comment[id]=Kustomisasi dan membentuk kembali berkas ISO

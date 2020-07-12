@@ -3,8 +3,8 @@
 # Custom ISO Builder script can extract existing ISO image, 
 # customize the file system and build a new ISO image.
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Copyright 2014-2019 under the GNU GPL2 License
-# Last update 2019/11/21 by pavroo
+# Copyright 2014-2020 under the GNU GPL2 License
+# Last update 2020/07/12 by pavroo
 #
 # The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
 # Copyright 2007-2012 Under the GNU GPL2 License
@@ -13,46 +13,46 @@
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
-if [ "`cat /etc/default/locale | grep el`" != "" ]; then
+if [ "`cat /etc/default/locale | grep LANG=el`" != "" ]; then
 . $DEFLOCDIR/el
-elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=es`" != "" ]; then
 . $DEFLOCDIR/es
-elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=fr`" != "" ]; then
 . $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep hu`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=hu`" != "" ]; then
 . $DEFLOCDIR/hu
-elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=id_ID`" != "" ]; then
 . $DEFLOCDIR/id_ID
-elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=it`" != "" ]; then
 . $DEFLOCDIR/it
-elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=ja`" != "" ]; then
 . $DEFLOCDIR/ja
-elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pl`" != "" ]; then
 . $DEFLOCDIR/pl
-elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
-elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
-elif [ "`cat /etc/default/locale | grep ru`" != "" ]; then
+elif [ "`cat /etc/default/locale | grep LANG=ru`" != "" ]; then
 . $DEFLOCDIR/ru
 else
 . $DEFLOCDIR/en
 fi
 
-DIALOG400="yad --window-icon=drive-cdrom --width=400 --height=200 --center"
-DIALOG500="yad --window-icon=drive-cdrom --width=500 --height=300 --center"
-DIALOG700="yad --window-icon=drive-cdrom --width=700 --height=500 --center"
-DIALOG="yad --window-icon=drive-cdrom --width=600 --height=350 --center"
-TITLE="--always-print-result --dialog-sep --image=drive-cdrom --title="
+DIALOG400="yad --window-icon=media-cdrom --width=400 --height=200 --center"
+DIALOG500="yad --window-icon=media-cdrom --width=500 --height=300 --center"
+DIALOG700="yad --window-icon=media-cdrom --width=700 --height=500 --center"
+DIALOG="yad --window-icon=media-cdrom --width=600 --height=350 --center"
+TITLE="--always-print-result --dialog-sep --image=media-cdrom --title="
 TEXT="--text="
 ENTRY="--entry "
 ENTRYTEXT="--entry-text "
 MENU="--list --column=$LOCAL1 --column=$LOCAL2"
 OKEXIT=" --button=Ok:0 --button=$LOCAL3:1 "
 MSGBOX=" --button=Ok:0 "
-FILESELECT="--file-selection"
+FILESELECT="--file"
 TITLETEXT="Custom ISO Builder"
-DIRSELECT="--file-selection --directory"
+DIRSELECT="--file --directory"
 FILTER="--file-filter"
 FIELD="--field"
 

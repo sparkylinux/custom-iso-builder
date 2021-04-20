@@ -3,8 +3,8 @@
 # Custom ISO Builder script can extract existing ISO image, 
 # customize the file system and build a new ISO image.
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Copyright 2014-2020 under the GNU GPL2 License
-# Last update 2020/10/06 by pavroo
+# Copyright 2014-2021 under the GNU GPL2 License
+# Last update 2021/04/20 by pavroo
 #
 # The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
 # Copyright 2007-2012 Under the GNU GPL2 License
@@ -13,7 +13,9 @@
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
-if [ "`cat /etc/default/locale | grep LANG= | grep el`" != "" ]; then
+if [ "`cat /etc/default/locale | grep LANG= | grep de`" != "" ]; then
+. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep LANG= | grep el`" != "" ]; then
 . $DEFLOCDIR/el
 elif [ "`cat /etc/default/locale | grep LANG= | grep es`" != "" ]; then
 . $DEFLOCDIR/es

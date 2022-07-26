@@ -3,8 +3,8 @@
 # Custom ISO Builder script can extract existing ISO image, 
 # customize the file system and build a new ISO image.
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Copyright 2014-2021 under the GNU GPL2 License
-# Last update 2021/04/20 by pavroo
+# Copyright 2014-2022 under the GNU GPL2 License
+# Last update 2022/07/26 by pavroo
 #
 # The script uses a part of Remastersys code created by Tony "Fragadelic" Brijeski
 # Copyright 2007-2012 Under the GNU GPL2 License
@@ -18,7 +18,11 @@ if [ "`cat /etc/default/locale | grep LANG= | grep de`" != "" ]; then
 elif [ "`cat /etc/default/locale | grep LANG= | grep el`" != "" ]; then
 . $DEFLOCDIR/el
 elif [ "`cat /etc/default/locale | grep LANG= | grep es`" != "" ]; then
-. $DEFLOCDIR/es
+	if [ "`cat /etc/default/locale | grep LANG= | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es_AR
+	else
+. $DEFLOCDIR/es_ES
+	fi
 elif [ "`cat /etc/default/locale | grep LANG= | grep fr`" != "" ]; then
 . $DEFLOCDIR/fr
 elif [ "`cat /etc/default/locale | grep LANG= | grep hu`" != "" ]; then

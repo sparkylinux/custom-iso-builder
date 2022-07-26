@@ -3,7 +3,7 @@ Upstream Author(s):
     Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 
 Files: *
-    Copyright (C) 2014-2021 Paweł Pijanowski
+    Copyright (C) 2014-2022 Paweł Pijanowski
     Under the GNU GPL2 License
 
 File: /usr/bin/custom-iso-builder
@@ -18,9 +18,13 @@ File: el
     Copyright (C) 2019 jidan
     License: GPL-2
 
-File: es
+File: es_AR
     Copyright (C) 2015, 2016 Fernando "seacat" Velo <seacat.linux@gmail.com>
     License: GPL-2
+
+File: es_ES
+    Copyright 2022 depaz
+    License: GNU GPL-3
 
 File: fr
     Copyright (C) 2016 hiver <hiver@club-internet.fr>
@@ -36,6 +40,7 @@ File: id_ID
 
 File: it
     Copyright (C) 2015 Carlo‚ "malato" Troiani <abbassolafrangetta@gmail.com>
+    Copyright 2022 Yodel Sinatra <mastodon.uno/@YodelSinatra>
     License: GPL-2
 
 File: ja

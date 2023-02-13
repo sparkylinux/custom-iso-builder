@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Created by Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2014/07/21
-# Copyright 2014-2022 Under the GNU GPL2 License
-# Last update 2022/07/26 by pavroo
+# Copyright 2014-2023 Under the GNU GPL2 License
+# Last update 2023/02/13 by pavroo
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/custom-iso-builder"
@@ -34,6 +34,8 @@ elif [ "`cat /etc/default/locale | grep LANG= | grep pt_PT`" != "" ]; then
 . $DEFLOCDIR/pt_PT
 elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
+elif [ "`cat /etc/default/locale | grep LANG= | grep uk`" != "" ]; then
+. $DEFLOCDIR/uk
 else
 . $DEFLOCDIR/en
 fi

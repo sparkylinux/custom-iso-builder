@@ -3,7 +3,7 @@ Upstream Author(s):
     Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 
 Files: *
-    Copyright (C) 2014-2022 Paweł Pijanowski
+    Copyright (C) 2014-2023 Paweł Pijanowski
     Under the GNU GPL2 License
 
 File: /usr/bin/custom-iso-builder
@@ -58,6 +58,10 @@ File: pt_PT
 File: ru
     Copyright (C) 2016 Igor Klyushnyov <inklu@yandex.ru>
     License: GPL-2
+
+File: uk
+    Copyright 2023 XalisRatt
+    License: GNU GPL-3
 
 License:
 

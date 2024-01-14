@@ -1,44 +1,44 @@
 # Hungarian localization file for Custom ISO Builder. (Translated by Nemomen & BunnyMnemonic)
 # Copyright 2015 Paweł‚ "pavroo" Pijanowski <pavroo@onet.eu> 2015/10/27
 # Under the GNU GPL v2
-# Last update 2023/09/23 by BunnyMnemonic
+# Last update 2023/10/09 by BunnyMnemonic
 LOCAL1="Név"
-LOCAL2="Információ”
+LOCAL2="Információ"
 LOCAL3="Kilépés"
 LOCAL4="Root-ként kell futtatni... Kilépés"
-LOCAL5="Ez az eszköz lehetővé teszi az ISO képek kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nA művelet a meghajtón nagyjából 5-20 GB helyet igényel.\n\nKérjük, válasszon opciót!”
+LOCAL5="Ez az eszköz lehetővé teszi az ISO képek kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nA művelet a meghajtón nagyjából 5-20 GB helyet igényel.\n\nKérjük, válasszon opciót!"
 LOCAL6="ISO kép kicsomagolása és építése"
 LOCAL7="Egy új, teljesen személyre szabott ISO kép kicsomagolása és építése"
 LOCAL8="A Custom ISO Builder-ről"
-LOCAL9="A Custom ISO Builder segítségével újraépíthet és tetszése szerint személyre szabhat egy létező ISO képet.\nSparkyLinux és egyéb, Debian alapú élő Linux disztribúciókhoz használható.”
-LOCAL10="Legyen óvatos az alkalmazással, használja saját felelősségére!”
+LOCAL9="A Custom ISO Builder segítségével újraépíthet és tetszése szerint személyre szabhat egy létező ISO képet.\nSparkyLinux és egyéb, Debian alapú élő Linux disztribúciókhoz használható."
+LOCAL10="Legyen óvatos az alkalmazással, használja saját felelősségére!"
 LOCAL11="A Custom ISO Builder a GNU GPL v2 licencet használja"
 LOCAL12="Javaslat, hibák és egyéb bejelentések\nSparkyLinux Forums http://sparkylinux.org/forum/"
-LOCAL13="Ez az eszköz lehetővé teszi az ISO képek kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nKérjük, válasszon opciót!”
+LOCAL13="Ez az eszköz lehetővé teszi az ISO képek kicsomagolását, személyre szabását és új ISO kép létrehozását.\n\nKérjük, válasszon opciót!"
 LOCAL14="Egy SQUASHFS-t tartalmazó, létező ISO kép kicsomagolása"
 LOCAL15="Belépés chroot-tal a rendszerbe és személyre szabás"
 LOCAL16="Midnight Commander fájlkezelő futtatása"
 LOCAL17="Az új ISO konfigurációs fájl szerkesztése"
-LOCAL18="Az összes DEB csomag kitisztítása és az ISO kép méretének csökkentése”
+LOCAL18="Az összes DEB csomag kitisztítása és az ISO kép méretének csökkentése"
 LOCAL19="Egy új, teljesen személyre szabott ISO kép építése"
-LOCAL20="Válasszon egy MUNKAkönyvtárat és egy kicsomagolni kívánt ISO képet! Csak Linux fájlrendszert használjon!”
+LOCAL20="Válasszon egy MUNKAkönyvtárat és egy kicsomagolni kívánt ISO képet! Csak Linux fájlrendszert használjon!"
 LOCAL21="Semmi sem változott.\n\nKattintson az OK gombra a kilépéshez!"
 LOCAL22="MŰKÖDŐ könyvtárat válasszon!"
-LOCAL23="Válassza ki a kicsomagolni kívánt ISO képet!”
-LOCAL24="Fájlok másolása az ISO képről.”\n\nKérjük, várjon...”
+LOCAL23="Válassza ki a kicsomagolni kívánt ISO képet!"
+LOCAL24="Fájlok másolása az ISO képről.\n\nKérjük, várjon..."
 LOCAL25="SQUASHFS kicsomagolása.\n\nKérjük, várjon..."
-LOCAL26="ISO kép kicsomagolva ide:”
+LOCAL26="ISO kép kicsomagolva ide:"
 LOCAL27="Kattintson az OK gombra a főmenübe való visszatéréshez."
 LOCAL28="NEM található SQASHFS fájl! \n\nKilépés most..."
-LOCAL29="Válasszon egy MUNKAkönyvtárat!”
-LOCAL30="Beléphet chroot-tal a rendszerbe, naprakésszé teheti fájljait és új dolgokat telepíthet. \n\n32-bites környezetbe chroot-oláshoz 32 vagy 64 bites gazdarendszerre van szüksége.\n64-bites környezetbe chroot-oláshoz 64 bites gazdarendszerre van szüksége. \n\nMiután befejezte, csak egy kernelt tartson előtelepítve az új ISO kép használatához!”
+LOCAL29="Válasszon egy MUNKAkönyvtárat!"
+LOCAL30="Beléphet chroot-tal a rendszerbe, naprakésszé teheti fájljait és új dolgokat telepíthet. \n\n32-bites környezetbe chroot-oláshoz 32 vagy 64 bites gazdarendszerre van szüksége.\n64-bites környezetbe chroot-oláshoz 64 bites gazdarendszerre van szüksége. \n\nMiután befejezte, csak egy kernelt tartson előtelepítve az új ISO kép használatához!"
 LOCAL31="Ez el fogja távolítani az összes letöltött DEB fájlt."
 LOCAL32="Most ki tudja cserélni az új ISO kép nevét és megadhatja saját opcióit az ISO felépítéséhez."
 LOCAL33="Kívánja folytatni?"
 LOCAL34="Ez meg fogja nyitja a Midnight Commander fájlkezelőt a személyre szabott fájlrendszerben.\n\nÍgy hozzáadhat, eltávolíthat vagy módosíthat rendszerfájlokat."
 LOCAL35="Végrehajtva! \n\nAz összes DEB csomag el lett távolítva.\nKattintson az OK gombra a kilépéshez!"
 LOCAL36="Ha már minden elő van készítve, fel tud építeni egy új ISO képet. \nAz összes Ön által létrehozott vagy kicserélt fájl fel lesz használva a MUNKAkönyvtárból. \n\nKíván most új ISO képet építeni?"
-LOCAL37="A tömörített fájlrendszer nagyobb, mint amit az iso9660 szabvány egyetlen fájl esetében megenged. Csökkentse az ISO kép építéséhez használt adatok mennyiségét, és próbálja meg újra!”
+LOCAL37="A tömörített fájlrendszer nagyobb, mint amit az iso9660 szabvány egyetlen fájl esetében megenged. Csökkentse az ISO kép építéséhez használt adatok mennyiségét, és próbálja meg újra!"
 LOCAL38="Hiányzik az SQASHFS fájl! \nNem lehet az új ISO képet létrehozni. \n\nKilépés most..."
 LOCAL39="Hiányzik az ISO képfájl! \nNem lehet létrehozni ISO hibridet. \n\nKilépés most..."
 LOCAL40="Hiányzik a hibrid ISO képfájl! \nNem lehet létrehozni md5sum fájlt. \n\nKilépés most..."
@@ -46,7 +46,7 @@ LOCAL41="Ha minden rendben ment, az új ISO kép használatra kész az Ön MUNKA
 LOCAL42="Kicsomagolhat és újraépíthet egy létező ISO képet.\n\nKérjük, válasszon opciót:"
 LOCAL43="Létező ISO kép kicsomagolása"
 LOCAL44="Ki nem csomagolt ISO kép újraépítése"
-LOCAL45="Válasszon egy MUNKAkönyvtárat és egy kicsomagolni kívánt ISO képet!”
+LOCAL45="Válasszon egy MUNKAkönyvtárat és egy kicsomagolni kívánt ISO képet!"
 LOCAL46="Ha már minden elkészült, újra tudja építeni az ISO képet\n\nLétező SQASHFS és más személyre szabott ISO fájlok használatával építhet ISO képet.\n\nKíván most új ISO képet építeni?"
 LOCAL47="Visszatérés a főmenübe"
 ### .desktop file to be translated too

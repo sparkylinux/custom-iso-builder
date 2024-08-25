@@ -18,7 +18,7 @@ if [ "$1" = "uninstall" ]; then
 	rm -f /etc/custom-iso-builder.conf
 	rm -f /usr/bin/custom-iso-builder
 	rm -rf /usr/lib/custom-iso-builder
-	rm -f /usr/lib/sparkycenter/system/custom-iso-builder.desktop
+	#rm -f /usr/lib/sparkycenter/system/custom-iso-builder.desktop
 	rm -f /usr/share/applications/custom-iso-builder.desktop
 	rm -f /usr/share/menu/custom-iso-builder
 	rm -rf /usr/share/sparky/custom-iso-builder
@@ -29,10 +29,10 @@ else
 		mkdir -p /usr/lib/custom-iso-builder/bin
 	fi
 	cp lib/* /usr/lib/custom-iso-builder/bin/
-	if [ ! -d /usr/lib/sparkycenter/system ]; then
-		mkdir -p /usr/lib/sparkycenter/system
-	fi
-	cp share/custom-iso-builder.desktop /usr/lib/sparkycenter/system/
+	#if [ ! -d /usr/lib/sparkycenter/system ]; then
+	#	mkdir -p /usr/lib/sparkycenter/system
+	#fi
+	#cp share/custom-iso-builder.desktop /usr/lib/sparkycenter/system/
 	cp share/custom-iso-builder.desktop /usr/share/applications/custom-iso-builder.desktop
 	cp share/custom-iso-builder /usr/share/menu/
 	if [ ! -d /usr/share/sparky/custom-iso-builder ]; then

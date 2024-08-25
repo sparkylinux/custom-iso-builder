@@ -1,0 +1,55 @@
+# Custom ISO Builderin suomenkielinen lokalisointitiedosto.
+# Copyright 2015 Paweł' ”pavroo” Pijanowski <pavroo@onet.eu> 2015/10/27
+# GNU GPL v2:n alainen
+# Viimeksi päivittänyt 2018/08/05 pavroo
+LOCAL1="Nimi”
+LOCAL2="Info”
+LOCAL3="Sulje”
+LOCAL4="Täytyy ajaa pääkäyttäjänä... Suljetaan”
+LOCAL5="Tämän työkalun avulla voit purkaa ISO-kuvan, muokata sitä ja luoda uuden ISO-kuvan.\n\nToiminto tarvitsee noin 5-20 Gt tilaa asemaltasi.\n\nValitse vaihtoehto:”
+LOCAL6="Pura ja rakenna ISO-kuva uudelleen”
+LOCAL7="Pura ja rakenna uusi, täysin mukautettu ISO-kuva”
+LOCAL8="Tietoja Custom ISO Builderista”
+LOCAL9="Custom ISO Builder on työkalu, joka voi rakentaa uudelleen olemassa olevan ISO-vedoksen ja muokata sitä haluamallasi tavalla.\nSitä voidaan käyttää SparkyLinuxissa ja muissa Debian-pohjaisissa live Linux -jakeluissa.”
+LOCAL10="Huomaa, että sovelluksen käyttäminen tapahtuu omalla vastuullasi.”
+LOCAL11="Custom ISO Builder on julkaistu GNU GPLv2 -lisenssin alaisuudessa.”
+LOCAL12="Ehdotuksia, virheitä ja muita asioita voi ilmoittaa \nSparkyLinux Forums http://sparkylinux.org/forum/”
+LOCAL13="Tämän työkalun avulla voit purkaa ISO-kuvan, muokata sitä ja luoda uuden.\n\nValitse vaihtoehto:”
+LOCAL14="Pura olemassa oleva ISO-kuva sisältäen SQUASHFS”
+LOCAL15="Chroot järjestelmään ja muokata sitä”
+LOCAL16="Suorita Midnight Commander -tiedostohallinta”
+LOCAL17="Muokkaa uuden ISO-tiedoston asetustiedostoa”
+LOCAL18="Siivoa kaikki DEB-paketit ISO-kuvan koon pienentämiseksi”
+LOCAL19="Rakenna uusi, täysin mukautettu ISO-kuva”
+LOCAL20="Sinun on valittava TYÖHAKEMISTO ja ISO-kuva, joka puretaan.Käytä vain Linux-tiedostojärjestelmää.”
+LOCAL21="Mitään ei ole tehty! \n\nKlikkaa OK lopettaaksesi.”
+LOCAL22="Valitse TYÖSKENTELY-hakemisto.”
+LOCAL23=”Valitse purettava ISO-kuva.”.
+LOCAL24=”Tiedostojen kopioiminen ISO-kuvasta nyt.\n\nOdota...”
+LOCAL25=”SQUASHFS:n purkaminen pakkauksesta nyt.\n\nOdota...”
+LOCAL26="ISO-kuva on purettu:”
+LOCAL27=”Palaa päävalikkoon napsauttamalla OK.”
+LOCAL28="SQASHFS-tiedostoa ei löytynyt! \n\nSuljetaan nyt...”
+LOCAL29="Valitse TYÖHAKEMISTO.”
+LOCAL30="Sen avulla voit chrootata järjestelmää, päivittää tiedostoja ja asentaa uusia asioita. \n\nChroot-toimintoon 32-bittiseen ympäristöön tarvitaan 32- tai 64-bittinen isäntäjärjestelmä. \nChroot-toimintoon 64-bittiseen ympäristöön tarvitaan 64-bittinen isäntäjärjestelmä. \n\nKun olet valmis, pidä vain yksi ydin esiasennettuna, jotta sitä voidaan käyttää uudessa ISO:ssa.”
+LOCAL31="Se poistaa kaikki ladatut DEB-tiedostot.”
+LOCAL32="Nyt voit vaihtaa uuden ISO-kuvan nimen ja lisätä omia vaihtoehtoja ISO-kuvan rakentamiseen.”
+LOCAL33="Haluatko jatkaa?”
+LOCAL34="Se avaa Midnight Commander -tiedostohallinnan mukautettuun tiedostojärjestelmään.\n\nSen avulla voit lisätä, poistaa tai muokata järjestelmätiedostoja.”
+LOCAL35="Valmis! \n\nKaikki DEB-paketit on poistettu.\nKlikkaa OK lopettaaksesi.”
+LOCAL36="Jos kaikki on jo esivalmisteltu, voit luoda uuden ISO-vedoksen. \nSe käyttää kaikkia tiedostoja, jotka olet luonut tai muuttanut TYÖSKENTELY-hakemistossasi. \n\nTahdotko rakentaa uuden ISO-kuvan nyt?”
+LOCAL37="Pakattu tiedostojärjestelmä on suurempi kuin iso9660-määrittely sallii yhdelle tiedostolle. Sinun on yritettävä pienentää ISO-kuvan rakentamiseen käyttämääsi tietomäärää ja yritettävä uudelleen."
+LOCAL38="SQASHFS-tiedosto puuttuu! \nEi voi luoda uutta ISO-kuvaa. \n\nSuljetaan nyt...”
+LOCAL39="ISO-kuvatiedosto puuttuu! \nCan't create ISO hybride. \n\nSuljetaan nyt...”
+LOCAL40="Hybridi-ISO-kuvatiedosto puuttuu! \nCan't create md5sum file. \n\nSuljetaan nyt...”
+LOCAL41="Jos kaikki sujui hyvin, uusi ISO-kuva on valmiina WORKING-hakemistossasi. \n\nVoit testata sitä virtuaalikoneessa, polttaa sen tyhjälle CD/DVD-levylle tai kopioida sen Flash-USB-levylle.”
+LOCAL42="Se antaa sinun purkaa ja rakentaa uudelleen olemassa olevan ISO-kuvan.\n\nValitse vaihtoehto:”
+LOCAL43="Pura olemassa oleva ISO-kuva”
+LOCAL44="Pakkaamattoman ISO-kuvan uudelleenrakentaminen”
+LOCAL45=”Sinun on valittava TYÖHAKEMISTO  ja ISO-kuva, joka puretaan.”
+LOCAL46="Jos kaikki on jo valmisteltu, voit rakentaa ISO-kuvan uudelleen.\n\nSe voi rakentaa kuvan käyttäen olemassa olevia SQASHFS- ja muita mukautettuja ISO-tiedostoja.\n\nTahdotko rakentaa uuden ISO-kuvan nyt?”
+LOCAL47="Takaisin päävalikkoon”
+### Myös .desktop-tiedosto on käännettävä
+# Name[fi]=
+# Comment[fi]=Muokkaa ja rakenna ISO-kuva uudelleen
+
